@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Dtella-bphc by varunyellina</title>
+    <title>Dtella-BPHC</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -30,6 +30,8 @@
           <ul>
             <li><a href="https://github.com/varunyellina/dtella-bphc/zipball/master" class="button">ZIP</a></li>
             <li><a href="https://github.com/varunyellina/dtella-bphc/tarball/master" class="button">TAR</a></li>
+            <li><a href="https://github.com/varunyellina/dtella-bphc/releases" class="button" target="_blank">OSX & Windows</a></li>
+            <li><a href="https://github.com/varunyellina/dtella-bphc/blob/master/docs/readme.txt" class="button" target="_blank">Readme</a></li>
           </ul>
         </div>
       </div><!-- end banner -->
@@ -42,13 +44,32 @@
 <h2>
 <a name="dtella-bphc" class="anchor" href="#dtella-bphc"><span class="octicon octicon-link"></span></a>dtella-bphc</h2>
 
-<p>Dtella is a decentralized direct connect hub used for file sharing. Because it's able to restrict file sharing to a specific IP range, Dtella is ideal for usage at low-latency campus networks where upload limits are imposed for external traffic. Open source software for infinity@bphc hub is hosted on <a href="https://github.com/varunyellina">github</a>.</p>
+<p>Dtella is a decentralized direct connect hub used for file sharing. Because it's able to restrict file sharing to a specific IP range, Dtella is ideal for usage at low-latency campus networks where upload limits are imposed for external traffic.</p>
 
-<h4>
-<a name="linux-install-instructions" class="anchor" href="#linux-install-instructions"><span class="octicon octicon-link"></span></a>Linux install instructions</h4>
+
+<hr>
+<!-- OSX -->
+<h3>
+<a name="osx-install-instructions" class="anchor" href="#osx-install-instructions"><span class="octicon octicon-link"></span></a>OSX install instructions</h3>
+<ul>
+<li>Download the .dmg from the releases page above.</li>
+<li>Open the dmg and copy the Dtella.app to your Applications folder.</li>
+<li>Run Dtella just as you would any other application. It runs in the background.</li>
+<li>Open your DC client and add a new favourite/bookmark.
+<ol>
+  <li>Name: infinity@bphc</li>
+  <li>Address: 127.0.0.1:7314</li>
+</ol>
+</li>
+</ul>
+
+<hr>
+<!-- Linux -->
+<h3>
+<a name="linux-install-instructions" class="anchor" href="#linux-install-instructions"><span class="octicon octicon-link"></span></a>Linux install instructions</h3>
 
 <ul>
-<li>Grab the latest snapshot from <a href="https://github.com/varunyellina/dtella-bphc">https://github.com/varunyellina/dtella-bphc</a>
+<li>Grab the latest tar/zip snapshot from above.
 </li>
 <li>Untar the source and move to your home directory</li>
 </ul>
@@ -65,23 +86,84 @@ $ mv &lt;extracted folder&gt;/* ~/.dtella
 $ cd ~ 
 $ vim dtella 
 </code></pre>
-<p>and paste this</p>
+<ul>
+<li>Paste this and save.</li>
+</ul>
 <pre><code>
 #!/bin/bash 
 python2 ~/.dtella/dtella.py &amp;
 </code></pre>
-
+<ul>
+<li>Make the script executable</li>
+</ul>
 <pre><code>$ chmod +x dtella
 </code></pre>
-
-<p>Launch dtella by executing</p>
-
+<ul>
+<li>Launch dtella</li>
+</ul>
 <pre><code>~/.dtella
 </code></pre>
+<ul>
+<li>Most linux systems have python preinstalled, but if the above gives errors - you will need to install some packages.</li>
+</ul>
+<pre><code>$ sudo apt-get install python-twisted python-pycrypto
+(or)
+$ sudo apt-get install python-twisted python-pycryptopp
+</code></pre>
+<ul>
+<li>Open your DC client and add a new favourite/bookmark.
+<ol>
+  <li>Name: infinity@bphc</li>
+  <li>Address: 127.0.0.1:7314</li>
+</ol>
+</li>
+</ul>
+
+<hr>
+<!-- Windows -->
+<h3>
+<a name="windows-install-instructions" class="anchor" href="#windows-install-instructions"><span class="octicon octicon-link"></span></a>Windows install instructions - (Dtella not released)</h3>
+<ul>
+<li>Download the .exe from the releases page above. It hasn't been released yet.</li>
+<li>Install Dtella and run it. Add it to your startup applications to make things easy.</li>
+<li>Open your DC client and add a new favourite/bookmark.
+<ol>
+  <li>Name: infinity@bphc</li>
+  <li>Address: 127.0.0.1:7314</li>
+</ol>
+</li>
+</ul>
+
+<hr>
+<!-- Port Forward & Firewalls -->
+<h3>
+<a name="port-forwards-firewalls" class="anchor" href="#port-forwards-firewalls"><span class="octicon octicon-link"></span></a>Port Forward &amp; Firewall Instructions</h3>
+<p>
+Dtella needs a UDP port for peer communication, and DC++ needs
+a TCP port for file transfers.  If you have a firewall or router
+that's blocking ports, then check out these guides:
+
+<a href="http://wiki.dtella.org/wiki/Firewall_Setup_Guide">http://wiki.dtella.org/wiki/Firewall_Setup_Guide</a><br />
+<a href="http://wiki.dtella.org/wiki/Router_Setup_Guide">http://wiki.dtella.org/wiki/Router_Setup_Guide</a>
+</p>
+
+<hr>
+<!-- Share -->
+<h3>
+<a name="share" class="anchor" href="#share"><span class="octicon octicon-link"></span></a>Share</h3>
+<p>Once you're on, you'll have to share some files unless you just
+want to chat.  In DC++, go here to get started: File > Settings > Sharing</p>
+
+<hr>
+<!-- Help -->
+<h3>
+<a name="help" class="anchor" href="#help"><span class="octicon octicon-link"></span></a>Getting help within Dtella</h3>
+<p>Type !help into the main chat to see a list of Dtella commands.</p>
+
 </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/varunyellina">varunyellina</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+        <p><small>Hosted on GitHub Pages</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
