@@ -6,4 +6,5 @@ Thumbs.db
 *.pyc
 
 dist
+build
 dtella/bridge_config.py

@@ -236,7 +236,7 @@ class DCHandler(BaseDCProtocol):
 
         self.info = ''
         self.nick = ''
-        self.bot = DtellaBot(self, '*Dtella')
+        self.bot = DtellaBot(self, 'infinity@bphc')
 
         # Handlers which can be used before attaching to Dtella
         self.addDispatch('$ValidateNick',   1, self.d_ValidateNick)
@@ -1014,7 +1014,7 @@ class DCFactory(ServerFactory):
 
 
 class DtellaBot(object):
-    # This holds the logic behind the "*Dtella" user
+    # This holds the logic behind the "infinity@bphc" user
 
     def __init__(self, dch, nick):
         self.dch = dch
@@ -1160,7 +1160,7 @@ class DtellaBot(object):
         "LOCALSEARCH":(
             "<ON | OFF>",
             "If local searching is enabled, then when you search, you will "
-            "see search results from the *Dtella user, which are actually "
+            "see search results from the infinity@bphc user, which are actually "
             "hosted on your computer.  Use this command without any arguments "
             "to see whether local searching is currently enabled or not."
             ),

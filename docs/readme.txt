@@ -3,10 +3,7 @@
 
 = Welcome =
 
-If you run into any roadblocks, you can go to http://dtella.org and
-click [IRC] to chat with all the Dtella users from your browser.
-
-Additionally there are many resources at: http://wiki.dtella.org
+You are responsible for your actions, including following these instructions.
 
 
 = Step 1: Get a Client =
@@ -17,19 +14,24 @@ with a DC client. Listed below are the most common clients for each
 supported operating system:
 
 Windows:
-DC++           http://www.dcpp.net/
+DC++           http://dcplusplus.sourceforge.net/
+ApexDC         http://www.apexdc.net/
+EiskaltDC++    https://code.google.com/p/eiskaltdc/
+
 
 OS X:
 Shakespeer     http://shakespeer.bzero.se/
+EiskaltDC++    https://code.google.com/p/eiskaltdc/
 
 Linux:
-LinuxDC++       http://linuxdcpp.berlios.de
+LinuxDC++      http://linuxdcpp.berlios.de
+EiskaltDC++    https://code.google.com/p/eiskaltdc/
 
 
 = Step 2: Connection Information =
 
 Create a favorite hub in DC++ with these options:
--> Name:    Dtella
+-> Name:    infinity@bphc
 -> Address: 127.0.0.1:7314
 
 
