@@ -1,7 +1,14 @@
 ---
+title : Dtella-BPHC
+
+author :
+  name : Varun Yellina
+  email : varun@yellina.io
+  github : varunyellina
+  twitter : varunyellina
 ---
 
-## dtella-bphc
+## Dtella-BPHC
 Dtella is a decentralized direct connect hub used for file sharing. Because it's able to restrict file sharing to a specific IP range, Dtella is ideal for usage at low-latency campus networks where upload limits are imposed for external traffic. Open source software for a Virginia Tech Dtella hub is hosted on [github](https://github.com/varunyellina).
 
 

@@ -17,7 +17,7 @@
   <body>
 
       <header>
-        <h1>Dtella-bphc</h1>
+        <h1>Dtella-BPHC</h1>
         <p>Dtella@BITS Pilani, Hyderabad: A decentralized peer-to-peer file sharing network using the direct connect protocol and restricted to BPHC IPs.</p>
       </header>
 
@@ -38,8 +38,8 @@
       <nav>
         <ul></ul>
       </nav>
-      <section>
-        <h2>
+<section>
+<h2>
 <a name="dtella-bphc" class="anchor" href="#dtella-bphc"><span class="octicon octicon-link"></span></a>dtella-bphc</h2>
 
 <p>Dtella is a decentralized direct connect hub used for file sharing. Because it's able to restrict file sharing to a specific IP range, Dtella is ideal for usage at low-latency campus networks where upload limits are imposed for external traffic. Open source software for infinity@bphc hub is hosted on <a href="https://github.com/varunyellina">github</a>.</p>
@@ -51,19 +51,23 @@
 <li>Grab the latest snapshot from <a href="https://github.com/varunyellina/dtella-bphc">https://github.com/varunyellina/dtella-bphc</a>
 </li>
 <li>Untar the source and move to your home directory</li>
-</ul><pre><code>$ unzip dtella-bphc-*.zip 
-$ cd dtella-bphc-*  
-$ mkdir ~/.dtella
-$ mv &lt;extracted folder&gt;/* ~/.dtella
+</ul>
+<pre><code>
+$ tar -xzf dtella-bphc-*.tar.gz 
+$ cd dtella-bphc-* 
+$ mkdir ~/.dtella 
+$ mv &lt;extracted folder&gt;/* ~/.dtella 
 </code></pre>
-
 <ul>
 <li>Create a script to launch dtella</li>
-</ul><pre><code>$ cd ~
-$ vim dtella
+</ul>
+<pre><code>
+$ cd ~ 
+$ vim dtella 
 </code></pre>
-
-<pre><code>#!/bin/bash
+<p>and paste this</p>
+<pre><code>
+#!/bin/bash 
 python2 ~/.dtella/dtella.py &amp;
 </code></pre>
 
@@ -74,7 +78,7 @@ python2 ~/.dtella/dtella.py &amp;
 
 <pre><code>~/.dtella
 </code></pre>
-      </section>
+</section>
       <footer>
         <p>Project maintained by <a href="https://github.com/varunyellina">varunyellina</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
