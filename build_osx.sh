@@ -10,6 +10,8 @@ rm $OUTDIR/$FILEBASE.dmg
 
 python setup.py py2app || exit
 
+find . -name "*.pyc" -exec rm -rf {} \;
+
 hdiutil eject /Volumes/Dtella
 hdiutil eject /Volumes/$FILEBASE
 
