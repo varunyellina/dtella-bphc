@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dtella-bphc by varunyellina</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Dtella-bphc</h1>
+        <p>Dtella@BITS Pilani, Hyderabad: A decentralized peer-to-peer file sharing network using the direct connect protocol and restricted to BPHC IPs.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/varunyellina/dtella-bphc" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/varunyellina/dtella-bphc/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/varunyellina/dtella-bphc/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a name="dtella-bphc" class="anchor" href="#dtella-bphc"><span class="octicon octicon-link"></span></a>dtella-bphc</h2>
+
+<p>Dtella is a decentralized direct connect hub used for file sharing. Because it's able to restrict file sharing to a specific IP range, Dtella is ideal for usage at low-latency campus networks where upload limits are imposed for external traffic. Open source software for a Virginia Tech Dtella hub is hosted on <a href="https://github.com/varunyellina">github</a>.</p>
+
+<h4>
+<a name="linux-install-instructions" class="anchor" href="#linux-install-instructions"><span class="octicon octicon-link"></span></a>Linux install instructions</h4>
+
+<ul>
+<li>Grab the latest snapshot from <a href="https://github.com/varunyellina/dtella-bphc">https://github.com/varunyellina/dtella-bphc</a>
+</li>
+<li>Untar the source and move to your home directory</li>
+</ul><pre><code>$ unzip dtella-bphc-*.zip 
+$ cd dtella-bphc-*  
+$ mkdir ~/.dtella
+$ mv &lt;extracted folder&gt;/* ~/.dtella
+</code></pre>
+
+<ul>
+<li>Create a script to launch dtella</li>
+</ul><pre><code>$ cd ~
+$ vim dtella
+</code></pre>
+
+<pre><code>#!/bin/bash
+python2 ~/.dtella/dtella.py &amp;
+</code></pre>
+
+<pre><code>$ chmod +x dtella
+</code></pre>
+
+<p>Launch dtella by executing</p>
+
+<pre><code>~/.dtella
+</code></pre>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/varunyellina">varunyellina</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-54390331-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
