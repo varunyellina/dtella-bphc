@@ -237,7 +237,15 @@ class DtellaMain_Client(core.DtellaMain_Base):
                 self.osm.updateMyInfo()
 
         # Start lookup
-        ipToHostname(ad).addCallback(cb)
+        #ipToHostname(ad).addCallback(cb)
+        loc = local.ipToLocation(my_ip)
+        if loc:
+            self.location[my_ip] = loc
+        else:
+            del self.location[my_ip]
+
+        if self.osm:
+            self.osm.updateMyInfo()
 
 
     def logPacket(self, text):

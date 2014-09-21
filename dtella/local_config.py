@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 build_prefix = "dtella-bphc-"
 
 # Dtella version number.
-version = "1.0"
+version = "1.0.2"
 
 # This is an arbitrary string which is used for encrypting packets.
 # It essentially defines the uniqueness of a Dtella network, so every
@@ -66,7 +66,7 @@ dconfig_puller = dtella.modules.pull_gdata.GDataPuller(
 # Enable this if you can devise a meaningful mapping from a user's hostname
 # to their location.  Locations are displayed in the "Connection / Speed"
 # column of the DC client.
-use_locations = False
+use_locations = True
 
 ###############################################################################
 
@@ -77,3 +77,39 @@ use_locations = False
 # DNS servers which will be used for doing IP->Hostname reverse lookups.
 # These should be set to your school's local DNS servers, for efficiency.
 rdns_servers = ['172.16.100.221']
+
+# Customized data for our implementation of hostnameToLocation
+import re
+dhcp_re = re.compile(r"172\.16\.(\d{1,3})\.\d{1,3}")
+
+dhcp_table = {
+    '8'            : "Krishna Bhavan",
+    '9'            : "Krishna Bhavan",
+    '12'            : "Ram Bhavan",
+    '13'            : "Ram Bhavan",
+    '34'            : "Gandhi Bhavan",
+    '35'            : "Gandhi Bhavan",
+    '37'            : "Shankar Bhavan",
+    '38'            : "Shankar Bhavan",
+    '42'            : "Meera Bhavan",
+    '43'            : "Meera Bhavan",
+    '46'            : "Budh Bhavan",
+    '47'            : "Budh Bhavan",
+    '48'            : "Vyas Bhavan",
+    '49'            : "Vyas Bhavan",
+    '50'            : "Malaviya Bhavan",
+    '51'            : "Malaviya Bhavan"
+}
+
+def ipToLocation(ip):
+    # Convert a ip into a human-readable location name.
+    if ip:
+        # Try dorms first
+        dhcp = dhcp_re.match(ip)
+        if dhcp:
+            try:
+                return dhcp_table[dhcp.group(1)]
+            except KeyError:
+                pass
+
+    return "Unknown"
